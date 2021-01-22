@@ -1,0 +1,9 @@
+.calendar-component {
+  max-width: 90%;
+  padding: 5em;
+}
+
+.rbc-day-bg,
+.rbc-row:hover {
+  cursor: pointer;
+}
