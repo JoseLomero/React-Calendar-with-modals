@@ -159,4 +159,16 @@ export default [
     start: new Date(2015, 3, 14, 18, 30, 0),
     end: new Date(2015, 3, 14, 20, 0, 0),
   },
+  {
+    id: 24,
+    title: 'Quedar impresionados por el calendario',
+    start: new Date(2021, 1, 25, 10, 30, 0),
+    end: new Date(2021, 1, 25, 11, 0, 0),
+  },
+  {
+    id: 25,
+    title: 'Pensar en contratar a Jose, que es un buen tio',
+    start: new Date(2021, 1, 25, 18, 30, 0),
+    end: new Date(2021, 1, 25, 20, 0, 0),
+  },
 ]

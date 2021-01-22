@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import 'moment/locale/es';
-import "react-big-calendar/lib/css/react-big-calendar.css";
 import events from '../backend/events'
 import Swal from 'sweetalert2'
+
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import './calendar-styles.css';
 
 
 const localizer = momentLocalizer(moment);
@@ -47,11 +49,10 @@ class Calendario extends Component {
                     events={this.state.events}
                     defaultView="month"
                     defaultDate={new Date()}
-                    style={{ height: "70vh", width: "50%" }}
-                    views={['month', 'day', 'agenda']}
+                    style={{height: "70vh"}}
+                    views={['month', 'week', 'day', 'agenda']}
 
                     onSelectEvent={event =>
-
                         Swal.fire({
                             title: event.title,
                             html: 'El evento empieza a las ' +
