@@ -47,16 +47,19 @@ class Calendario extends Component {
                     events={this.state.events}
                     defaultView="month"
                     defaultDate={new Date()}
-                    style={{ height: "70vh", width: "70vw" }}
+                    style={{ height: "70vh", width: "50%" }}
                     views={['month', 'day', 'agenda']}
 
                     onSelectEvent={event =>
+
                         Swal.fire({
                             title: event.title,
-                            html: 'El evento empieza a las <code>${event.start}</code></br> Y termina a las <code>${event.end}</code>',
+                            html: 'El evento empieza a las ' +
+                                localizer.format(event.start, 'k:mm') +
+                                '</br> Y termina a las ' +
+                                localizer.format(event.end, 'k:mm'),
                             confirmButtonText: 'Aceptar',
                         })
-                        // console.log(event)
                     }
                     onSelectSlot={this.handleSelect}
 
